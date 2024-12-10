@@ -10,3 +10,4 @@
 
 - Typescript / Javascript
 - Expo / React Native
+- Google Maps Api
