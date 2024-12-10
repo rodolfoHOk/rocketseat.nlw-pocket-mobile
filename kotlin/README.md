@@ -10,4 +10,4 @@
 
 - Kotlin
 - Android
-- Compose
+- Jetpack Compose
