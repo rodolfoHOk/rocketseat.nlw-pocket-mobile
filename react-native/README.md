@@ -1,6 +1,6 @@
 # NLW Pocket Mobile - Nearby
 
-> Evento RocketSeat
+> Evento RocketSeat - Trilha React Native
 
 ## Design no Figma
 
