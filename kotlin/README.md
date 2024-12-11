@@ -10,5 +10,6 @@
 
 - Kotlin
 - Android
-- Jetpack Compose
+- JetPack Compose
 - Google Maps API
+- QR Code

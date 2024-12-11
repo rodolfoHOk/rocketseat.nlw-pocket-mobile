@@ -10,4 +10,5 @@
 
 - Typescript / Javascript
 - Expo / React Native
-- Google Maps Api
+- Maps
+- QR Code

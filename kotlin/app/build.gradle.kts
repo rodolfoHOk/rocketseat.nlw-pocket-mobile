@@ -65,6 +65,8 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.navigation.compose)
     implementation(libs.kotlin.serialization)
+    implementation(platform(libs.ktor.bom))
+    implementation(libs.bundles.ktor.client)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
