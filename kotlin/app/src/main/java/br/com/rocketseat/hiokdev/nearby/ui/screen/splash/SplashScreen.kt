@@ -1,4 +1,4 @@
-package br.com.rocketseat.hiokdev.nearby.ui.screen
+package br.com.rocketseat.hiokdev.nearby.ui.screen.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

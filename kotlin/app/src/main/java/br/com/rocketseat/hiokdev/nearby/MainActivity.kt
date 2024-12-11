@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -11,11 +14,12 @@ import androidx.navigation.toRoute
 import br.com.rocketseat.hiokdev.nearby.data.model.Market
 import br.com.rocketseat.hiokdev.nearby.ui.screen.home.HomeScreen
 import br.com.rocketseat.hiokdev.nearby.ui.screen.market_details.MarketDetailsScreen
-import br.com.rocketseat.hiokdev.nearby.ui.screen.SplashScreen
-import br.com.rocketseat.hiokdev.nearby.ui.screen.WelcomeScreen
+import br.com.rocketseat.hiokdev.nearby.ui.screen.splash.SplashScreen
+import br.com.rocketseat.hiokdev.nearby.ui.screen.welcome.WelcomeScreen
 import br.com.rocketseat.hiokdev.nearby.ui.route.Home
 import br.com.rocketseat.hiokdev.nearby.ui.route.Splash
 import br.com.rocketseat.hiokdev.nearby.ui.route.Welcome
+import br.com.rocketseat.hiokdev.nearby.ui.screen.home.HomeViewModel
 import br.com.rocketseat.hiokdev.nearby.ui.theme.NearbyTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,6 +30,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             NearbyTheme {
                 val navController = rememberNavController()
+
+                val homeViewModel by viewModels<HomeViewModel>()
+                val homeUiState by homeViewModel.uiState.collectAsStateWithLifecycle()
 
                 NavHost(
                     navController = navController,
@@ -49,6 +56,8 @@ class MainActivity : ComponentActivity() {
 
                     composable<Home> {
                         HomeScreen(
+                            uiState = homeUiState,
+                            onEvent = homeViewModel::onEvent,
                             onNavigateToMarketDetails = { selectedMarket ->
                                 navController.navigate(selectedMarket)
                             }

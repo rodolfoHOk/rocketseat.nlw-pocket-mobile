@@ -35,6 +35,7 @@ import br.com.rocketseat.hiokdev.nearby.ui.theme.Gray400
 import br.com.rocketseat.hiokdev.nearby.ui.theme.Gray500
 import br.com.rocketseat.hiokdev.nearby.ui.theme.RedBase
 import br.com.rocketseat.hiokdev.nearby.ui.theme.Typography
+import coil3.compose.AsyncImage
 
 @Composable
 fun NearbyMarketCard(
@@ -59,14 +60,14 @@ fun NearbyMarketCard(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Image(
+            AsyncImage(
+                model = market.cover,
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
                     .fillMaxWidth(0.3f)
                     .height(IntrinsicSize.Min)
                     .aspectRatio(ratio = 1f, matchHeightConstraintsFirst = true),
                 contentScale = ContentScale.Crop,
-                painter = painterResource(R.drawable.img_burger), // TODO: Substituir pela imagem de market.cover
                 contentDescription = "Imagem do Estabelecimento"
             )
 

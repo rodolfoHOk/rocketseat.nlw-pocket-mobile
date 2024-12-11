@@ -63,6 +63,7 @@ dependencies {
 
     implementation(libs.maps.compose)
     implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
     implementation(libs.navigation.compose)
     implementation(libs.kotlin.serialization)
     implementation(platform(libs.ktor.bom))

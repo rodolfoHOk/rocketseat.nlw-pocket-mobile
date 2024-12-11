@@ -1,4 +1,4 @@
-package br.com.rocketseat.hiokdev.nearby.ui.screen
+package br.com.rocketseat.hiokdev.nearby.ui.screen.welcome
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
