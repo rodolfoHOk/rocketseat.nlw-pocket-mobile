@@ -42,7 +42,7 @@ import br.com.rocketseat.hiokdev.nearby.ui.theme.Typography
 import coil3.compose.AsyncImage
 
 @Composable
-fun MarketDetailsScreen(modifier: Modifier = Modifier, market: Market, category: Category) {
+fun MarketDetailsScreen(modifier: Modifier = Modifier, market: Market, onNavigateBack: () -> Unit) {
     Box(
         modifier = modifier.fillMaxSize()
     ) {
@@ -75,14 +75,14 @@ fun MarketDetailsScreen(modifier: Modifier = Modifier, market: Market, category:
                     ) {
                         Text(text = market.name, style = Typography.headlineLarge)
 
-                        category.icon?.let {
-                            Icon(
-                                modifier = Modifier.size(20.dp),
-                                painter = painterResource(id = it),
-                                tint = GreenBase,
-                                contentDescription = "Ícone de Categoria"
-                            )
-                        }
+//                        category.icon?.let {
+//                            Icon(
+//                                modifier = Modifier.size(20.dp),
+//                                painter = painterResource(id = it),
+//                                tint = GreenBase,
+//                                contentDescription = "Ícone de Categoria"
+//                            )
+//                        }
                     }
 
                     Spacer(modifier = Modifier.height(16.dp))
@@ -101,13 +101,13 @@ fun MarketDetailsScreen(modifier: Modifier = Modifier, market: Market, category:
                         .weight(1f)
                         .verticalScroll(rememberScrollState())
                 ) {
-                    if (market.rules.isNotEmpty()) {
-                        NearbyMarketDetailsRules(rules = market.rules)
-
-                        HorizontalDivider(
-                            modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp)
-                        )
-                    }
+//                    if (market.rules.isNotEmpty()) {
+//                        NearbyMarketDetailsRules(rules = market.rules)
+//
+//                        HorizontalDivider(
+//                            modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp)
+//                        )
+//                    }
 
                     NearbyMarketDetailsInfos(market = market)
 
@@ -135,7 +135,7 @@ fun MarketDetailsScreen(modifier: Modifier = Modifier, market: Market, category:
                 .align(Alignment.TopStart)
                 .padding(24.dp),
             iconRes = R.drawable.ic_arrow_left,
-            onClick = {}
+            onClick = onNavigateBack
         )
     }
 }
@@ -143,5 +143,5 @@ fun MarketDetailsScreen(modifier: Modifier = Modifier, market: Market, category:
 @Preview
 @Composable
 private fun MarketDetailsScreenPreview() {
-    MarketDetailsScreen(market = mockMarkets.first(), category = mockCategories.first())
+    MarketDetailsScreen(market = mockMarkets.first(), onNavigateBack = {})
 }
