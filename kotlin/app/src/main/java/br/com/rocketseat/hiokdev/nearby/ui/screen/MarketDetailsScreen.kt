@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -132,8 +133,9 @@ fun MarketDetailsScreen(modifier: Modifier = Modifier, market: Market, onNavigat
 
         NearbyButton(
             modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(24.dp),
+                .statusBarsPadding()
+                .padding(start = 24.dp)
+                .align(Alignment.TopStart),
             iconRes = R.drawable.ic_arrow_left,
             onClick = onNavigateBack
         )
