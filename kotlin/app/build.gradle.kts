@@ -68,6 +68,8 @@ dependencies {
     implementation(libs.kotlin.serialization)
     implementation(platform(libs.ktor.bom))
     implementation(libs.bundles.ktor.client)
+    implementation(libs.zxing)
+    implementation(libs.zxing.android.embedded)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
