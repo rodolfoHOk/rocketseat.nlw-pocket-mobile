@@ -11,4 +11,4 @@
 - Typescript / Javascript
 - Expo / React Native
 - Maps
-- QR Code
+- QR Code Scanner

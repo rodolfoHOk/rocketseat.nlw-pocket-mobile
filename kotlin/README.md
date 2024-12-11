@@ -12,4 +12,4 @@
 - Android
 - JetPack Compose
 - Google Maps API
-- QR Code
+- QR Code Scanner
