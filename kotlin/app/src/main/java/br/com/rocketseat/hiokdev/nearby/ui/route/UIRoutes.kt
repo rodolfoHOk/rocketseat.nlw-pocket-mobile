@@ -1,4 +1,4 @@
-package br.com.rocketseat.hiokdev.nearby.ui.screen.route
+package br.com.rocketseat.hiokdev.nearby.ui.route
 
 import kotlinx.serialization.Serializable
 
