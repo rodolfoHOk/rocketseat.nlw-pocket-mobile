@@ -9,8 +9,8 @@ val mockRules = listOf(
         marketId = "012576ea-4441-4b8a-89e5-d5f32104c7c4"
     ),
     Rule(
-        id = "312576ea-4341-1b8a-83e5-d5f32204c7b1",
+        id = "d01ed5d1-02dd-4233-a5ae-32e37dbf29a6",
         description = "Válido apenas para consumo no local",
-        marketId = "bde73364-95c5-46e4-8084-79a7ca3824c4"
+        marketId = "2bc11e34-5f30-4ba0-90fa-c1c98f649281"
     )
 )
