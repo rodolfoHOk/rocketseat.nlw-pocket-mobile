@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import br.com.rocketseat.hiokdev.nearby.ui.screen.HomeScreen
 import br.com.rocketseat.hiokdev.nearby.ui.theme.NearbyTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +21,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             NearbyTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+//                    Greeting(
+//                        name = "Android",
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
+                    HomeScreen(Modifier.padding(innerPadding))
                 }
             }
         }
