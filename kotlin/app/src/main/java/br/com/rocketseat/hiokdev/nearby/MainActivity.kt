@@ -10,7 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import br.com.rocketseat.hiokdev.nearby.data.model.Market
 import br.com.rocketseat.hiokdev.nearby.ui.screen.home.HomeScreen
-import br.com.rocketseat.hiokdev.nearby.ui.screen.MarketDetailsScreen
+import br.com.rocketseat.hiokdev.nearby.ui.screen.market_details.MarketDetailsScreen
 import br.com.rocketseat.hiokdev.nearby.ui.screen.SplashScreen
 import br.com.rocketseat.hiokdev.nearby.ui.screen.WelcomeScreen
 import br.com.rocketseat.hiokdev.nearby.ui.route.Home
